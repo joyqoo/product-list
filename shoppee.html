@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>商品選項與連結頁面</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  /* 基本樣式 */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    padding: 20px;
+  }
+
+  /* 網格容器：實現左右兩欄佈局 */
+  .grid-container {
+    display: grid;
+    /* 設置兩欄，每欄寬度相等 (1fr) */
+    grid-template-columns: 1fr 1fr;
+    gap: 30px; /* 欄位之間的間距 */
+    max-width: 1200px; /* 限制最大寬度，讓頁面居中 */
+    margin: 0 auto;
+  }
+
+  /* 標題居中 */
+  .main-header {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+    grid-column: 1 / -1; /* 讓主標題跨越所有欄位 */
+  }
+
+  /* 容器樣式 */
+  .product-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px; /* 商品之間的間距 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  /* 品項標題樣式 (現在僅顯示商品名稱) */
+  .product-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  /* 標準藍色選項按鈕 (WholeBean) */
+  .option-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 18px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #007bff;
+    background-color: #e9f5ff;
+    color: #007bff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+  }
+  .option-button:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  /* 橘色選項按鈕 (用於 Taster Pack) */
+  .option-button-orange {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 18px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    /* 橘色樣式 */
+    border: 2px solid #ff7f50; /* 珊瑚橘邊框 */
+    background-color: #fff;
+    color: #ff7f50; /* 珊瑚橘文字 */
+    text-decoration: none;
+    border-radius: 4px; /* 方形邊角 */
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+    position: relative;
+  }
+  .option-button-orange:hover {
+    background-color: #ff7f50;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  /* 圖片樣式 (用於 Oyu 商品) */
+  .image-icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+    background-color: #ccc;
+    border-radius: 2px;
+  }
+
+  /* RWD 響應式設計：在小螢幕上變回單欄 */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* 單欄顯示 */
+      gap: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+
+  <h1 class="main-header">商品選單</h1>
+
+  <div class="product-container">
+    <div class="product-title">3 x 100g Coffee Bean Taster Pack</div>
+
+    <a
+      href="https://shopee.com.my/3-x-100g-Coffee-Bean-Taster-Pack-(-Espresso-Filter-)%F0%9F%A6%89-GHOSTBIRD-COFFEE-(freshly-roasted-free-grinding-service)-i.968526366.29476797599?extraParams=%7B%22display_model_id%22%3A129246706185%7D"
+      target="_blank"
+      class="option-button-orange"
+    >
+      Espresso (WholeBean)
+    </a>
+
+    <a
+      href="https://shopee.com.my/3-x-100g-Coffee-Bean-Taster-Pack-(-Espresso-Filter-)%F0%9F%A6%89-GHOSTBIRD-COFFEE-(freshly-roasted-free-grinding-service)-i.968526366.29476797599?extraParams=%7B%22display_model_id%22%3A129246706185%7D"
+      target="_blank"
+      class="option-button-orange"
+    >
+      SOE (WholeBean)
+    </a>
+  </div>
+
+  <div class="product-container">
+    <div class="product-title">JWC Signature Blend : Caramel and Popcorn - Coffee</div>
+
+    <a
+      href="https://shopee.com.my/JWC-Signature-Blend-Caramel-and-Popcorn-Coffee-BeanWholeBeanGroundCoffeeFresh-Roast100-Arabica-i.385196780.9316689156?extraParams=%7B%22display_model_id%22%3A63746377558%7D"
+      target="_blank"
+      class="option-button"
+    >
+      200g WholeBean
+    </a>
+  </div>
+
+  <div class="product-container">
+    <div class="product-title">Honduras El Puente 🦉GHOSTBIRD COFFEE</div>
+
+    <a
+      href="https://shopee.com.my/Honduras-El-Puente%F0%9F%A6%89GHOSTBIRD-COFFEE-(Freshly-roasted)-Coffee-Bean-Arabica-Coffee-Biji-Kopi-i.968526366.27937211191?xptdk=43f7dd5c-f6c6-4ef1-952f-bb630274f248"
+      target="_blank"
+      class="option-button"
+    >
+      300g WholeBean
+    </a>
+  </div>
+
+  <div class="product-container">
+    <div class="product-title">Borneo Blend 🦉GHOSTBIRD COFFEE</div>
+
+    <a
+      href="https://shopee.com.my/Borneo-Blend-%F0%9F%A6%89GHOSTBIRD-COFFEE-(Freshly-roast)-Arabica-Coffee-Bean-Espresso-Bean-Biji-Kopi-%E5%92%96%E5%95%A1-%E8%B1%86-i.968526366.42003192378?xptdk=ef28d43a-b493-49ff-afde-a23fb41cbf91"
+      target="_blank"
+      class="option-button"
+    >
+      300g WholeBean
+    </a>
+  </div>
+
+  <div class="product-container">
+    <div class="product-title">GHOSTBIRD COFFEE - Espresso Blend</div>
+
+    <a
+      href="https://shopee.com.my/GHOSTBIRD-COFFEE-Espresso-Blend-Moonwalker-(Freshly-roasted)-Coffee-Bean-Arabica-Biji-Kopi-%E5%92%96%E5%95%A1-i.968526366.25472524459?xptdk=8b6b0894-f12c-4789-982d-e92b6378fc68"
+      target="_blank"
+      class="option-button"
+    >
+      300g WholeBean
+    </a>
+  </div>
+
+  <div class="product-container">
+    <div class="product-title">MJU - BUTTERSCOTCH Single Origin Brazil Cerrado</div>
+
+    <a
+      href="https://shopee.com.my/MJU-BUTTERSCOTCH-Single-Origin-Brazil-Cerrado-Arabica-Coffee-Bean-Medium-Dark-Biji-Kopi-%E5%92%96%E5%95%A1%E8%B1%86(250g-500g-1kg)-i.578598140.12699499058?xptdk=8dbc525e-1a0e-45a5-8612-c13425bb7a4b"
+      target="_blank"
+      class="option-button"
+    >
+      250g WholeBean
+    </a>
+  </div>
+
+  <div class="product-container">
+    <div class="product-title">MJU - BERRY YAMMY Single Origin Kenya</div>
+
+    <a
+      href="https://shopee.com.my/MJU-BERRY-YAMMY-Single-Origin-Kenya-Arabica-Coffee-Bean-Light-Medium-Biji-Kopi-%E5%92%96%E5%95%A1%E8%B1%86-(250g-500g-1kg)-i.578598140.24343151933?xptdk=8c642614-25f9-45b2-8b66-d5db00fd1764"
+      target="_blank"
+      class="option-button"
+    >
+      250g WholeBean
+    </a>
+  </div>
+
+  <div class="product-container">
+    <div class="product-title">BEAN BROTHERS Peru Cajamarca Decaf Decaffeinated</div>
+
+    <a
+      href="https://shopee.com.my/BEAN-BROTHERS-Peru-Cajamarca-Decaf-Decaffeinated-Coffee-Beans-(200g-1kg-5x200g)-i.341305828.23544836670?xptdk=41a7c284-fcfd-40f8-a5a8-a5989db34134"
+      target="_blank"
+      class="option-button"
+    >
+      200g WholeBean
+    </a>
+  </div>
+
+  <div class="product-container">
+    <div class="product-title">BEAN BROTHERS Black Suit Medium Dark Roast Arabica</div>
+
+    <a
+      href="https://shopee.com.my/BEAN-BROTHERS-Black-Suit-Medium-Dark-Roast-Arabica-Coffee-Bean-Kopi-Biji-%E5%92%96%E5%95%A1%E8%B1%86-(200g-1kg-5x200g)-i.341305828.4863749881?xptdk=bd800245-baf8-4d59-9bee-ae4ad5385d90"
+      target="_blank"
+      class="option-button"
+    >
+      200g WholeBean
+    </a>
+  </div>
+
+  <div class="product-container">
+    <div class="product-title">BEAN BROTHERS Velvet White Medium Light Roast Arabica</div>
+
+    <a
+      href="https://shopee.com.my/BEAN-BROTHERS-Velvet-White-Medium-Light-Roast-Arabica-Coffee-Beans-Kopi-Biji-%E5%92%96%E5%95%A1%E8%B1%86-(200g-1kg-5x200g)-i.341305828.3563899871?xptdk=b7500548-ff3a-415f-b04d-0a35f2d5aa47"
+      target="_blank"
+      class="option-button"
+    >
+      200g WholeBean
+    </a>
+  </div>
+
+  <div class="product-container">
+    <div class="product-title">Three Wise Men (Espresso)</div>
+
+    <a
+      href="https://shopee.com.my/Three-Wise-Men-(Espresso)-Coffee-Bean-Medium-Dark-Roast-i.155004331.22641222883?xptdk=e7b39ab9-19e5-446d-a7be-ec573f0f1803"
+      target="_blank"
+      class="option-button"
+    >
+      200g WholeBean
+    </a>
+  </div>
+
+  <div class="product-container">
+    <div class="product-title">Midnight Shadow Espresso</div>
+
+    <a
+      href="https://shopee.com.my/Midnight-Shadow-Espresso-Coffee-Bean-Dark-Roast-100-Arabica-i.155004331.21698999981?xptdk=278f1881-d5c9-43be-b8ba-cd8de457f29d"
+      target="_blank"
+      class="option-button"
+    >
+      200g WholeBean
+    </a>
+  </div>
+
+  <div class="product-container">
+    <div class="product-title">Colombia Supremo Coffee Bean</div>
+
+    <a
+      href="https://shopee.com.my/Colombia-Supremo-Coffee-Bean-Medium-Roast-100-Arabica-i.155004331.7455850354?xptdk=92ebb0b5-b303-4e2f-8d43-7c63496b53b7"
+      target="_blank"
+      class="option-button"
+    >
+      200g WholeBean
+    </a>
+  </div>
+
+  <div class="product-container">
+    <div class="product-title">Oyu Salted Egg Fish Skin</div>
+
+    <a
+      href="https://shopee.com.my/Oyu-Salted-Egg-Fish-Skin-French-Fries-Soy-Skin-Sichuan-Super-Value-Bundle-Pack-Buy-10-Free-2-%E7%8E%B0%E8%B4%A7-%E4%B9%B010-%E9%80%812-%E8%B6%85%E5%80%BC%E4%BC%98%E6%83%A0%E5%A5%97%E8%A3%85-i.101503278.17669638866?extraParams=%7B%22display_model_id%22%3A154545684035%7D"
+      target="_blank"
+      class="option-button"
+    >
+      <span class="image-icon" style="background-image: url('');"></span>
+      MIX & MATCH 混合口味
+    </a>
+  </div>
+
+</div>
+
+</body>
+</html>
